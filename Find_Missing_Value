@@ -1,0 +1,23 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        
+        int expect_sum=0;
+        int actual_sum=0;
+
+        int result = 0;
+        for(int i=0;i<=nums.length;i++)
+        {
+            expect_sum +=i; // added index 
+        }
+
+        for(int i=0;i<nums.length;i++)
+        {
+            actual_sum +=nums[i];   // added original values
+        }
+        result = expect_sum - actual_sum ;
+
+        return result;
+
+
+    }
+}
